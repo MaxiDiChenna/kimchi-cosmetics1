@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Kimchi Cosmetics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html, body { height: 100%; }
+
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#333;
+      background: linear-gradient(180deg, #ffb3d9 0%, #ffd9eb 35%, #ffffff 80%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+
+    /* ===== NAV ===== */
+    nav{
+      background: linear-gradient(90deg, #ff9acb, #ffd6e8);
+      display:flex;
+      align-items:center;
+      padding:12px 30px;
+      box-shadow:0 4px 15px rgba(0,0,0,.15);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    nav img{
+      height:55px;
+    }
+
+    nav ul{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      gap:30px;
+      flex-wrap: wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#111;
+      font-weight:700;
+    }
+
+    nav a:hover{ color:#fff; }
+
+    /* ===== BANNER ===== */
+    .banner-wrapper{
+      max-width:1200px;
+      margin:40px auto;
+      padding:22px;
+      background: linear-gradient(180deg, #ffb3d9 0%, #ffd9eb 50%, #ffffff 100%);
+      border-radius:34px;
+    }
+
+    .banner{
+      width:100%;
+      height:360px;
+      background:
+        linear-gradient(rgba(255,182,213,0.45), rgba(255,255,255,0.75)),
+        url("banner.png") center/contain no-repeat;
+      background-color:#ffe6f1;
+      border-radius:26px;
+      overflow:hidden;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    h1{ color:#d63384; margin:0 0 10px; }
+    h2{ color:#c2185b; }
+    h3{ color:#ad1457; }
+
+    /* ===== CATEGORÍAS ===== */
+    .categoria{
+      background: linear-gradient(180deg, #fff0f7, #ffffff);
+      border-radius:20px;
+      padding:25px;
+      margin-bottom:25px;
+      box-shadow:0 8px 20px rgba(214,51,132,.15);
+    }
+
+    .categoria h3{
+      margin-top:0;
+      border-bottom:2px solid #ffd1e6;
+      padding-bottom:8px;
+    }
+
+    ul{ padding-left:20px; }
+    li{ margin:6px 0; }
+
+    .subtitulo{
+      margin: 18px 0 8px;
+      font-weight: 800;
+      color:#ad1457;
+    }
+
+    /* ===== PRODUCTO CON IMÁGENES ===== */
+    .producto{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:25px;
+      margin-top:14px;
+      background: linear-gradient(180deg, #fff5fa, #ffffff);
+      padding:25px;
+      border-radius:22px;
+      box-shadow:0 8px 20px rgba(214,51,132,.15);
+    }
+
+    .producto-galeria{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:12px;
+    }
+
+    .producto-galeria img{
+      width:100%;
+      border-radius:16px;
+      object-fit: cover;
+      box-shadow:0 4px 10px rgba(0,0,0,.15);
+    }
+
+    .producto-info h4{
+      margin:0 0 10px;
+      font-size:22px;
+      color:#ad1457;
+    }
+
+    .producto-desc{
+      padding-left:18px;
+      margin: 12px 0;
+    }
+
+    .producto-desc li{
+      font-weight:600;
+    }
+
+    .precio{
+      font-size:24px;
+      font-weight:800;
+      color:#d63384;
+      margin:15px 0;
+    }
+
+    .btn-comprar{
+      display:inline-block;
+      padding:12px 20px;
+      background: linear-gradient(90deg, #ff9acb, #ffb6d5);
+      color:#111;
+      font-weight:700;
+      text-decoration:none;
+      border-radius:999px;
+      box-shadow:0 6px 15px rgba(214,51,132,.35);
+    }
+
+    .btn-comprar:hover{
+      transform: scale(1.03);
+    }
+
+    /* ===== COMO COMPRAR ===== */
+    ol li{
+      margin:10px 0;
+      font-weight:600;
+    }
+
+    /* ===== FOOTER ===== */
+    footer{
+      background: linear-gradient(90deg, #ff9acb, #ffb6d5);
+      color:#111;
+      text-align:center;
+      padding:18px;
+      margin-top:40px;
+      font-weight:700;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px){
+      .banner{ height:260px; }
+      .producto{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav>
+    <img src="logo.png" alt="Kimchi Cosmetics">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#comprar">¿Cómo comprar?</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== BANNER ===== -->
+  <div class="banner-wrapper">
+    <div class="banner"></div>
+  </div>
+
+  <!-- ===== INICIO ===== -->
+  <section id="inicio" class="container">
+    <h1>Kimchi Cosmetics</h1>
+    <p>Maquillaje divertido, moderno y lleno de estilo 💄🐱</p>
+  </section>
+
+  <!-- ===== PRODUCTOS ===== -->
+  <section id="productos" class="container">
+    <h2>Productos</h2>
+
+    <div class="categoria">
+      <h3>Maquillaje</h3>
+
+      <!-- ===== LABIOS ===== -->
+      <div class="categoria">
+        <h3>Labios</h3>
+
+        <!-- Producto con imágenes (nuevo) -->
+        <div class="producto">
+          <div class="producto-galeria">
+            <img src="lipgloss.jpg" alt="Producto Labios - Foto 1">
+            <img src="lipgloss2.jpg"Producto Labios - Foto 2">
+          </div>
+
+          <div class="producto-info">
+            <h4>Corrector (titulo)</h4>
+            <ul class="producto-desc">
+              <li>Cobertura media</li>
+              <li>Ligera</li>
+              <li>Único tono</li>
+            </ul>
+            <p class="precio">$2.000</p>
+            <a class="btn-comprar" href="#contacto">Comprar</a>
+          </div>
+        </div>
+
+                <div class="producto">
+          <div class="producto-galeria">
+            <img src="gloss1.jpg" alt="Producto Labios - Foto 1">
+            <img src="gloss2.jpg"Producto Labios - Foto 2">
+            <img src="gloss3.jpg" alt="diferente tono de gloss">
+            <img src="gloss4.jpg" alt="diferente tono de gloss">
+            <img src="gloss5.jpg">
+            <img src="gloss6.jpg">
+          </div>
+
+          <div class="producto-info">
+            <h4>Lip Gloss</h4>
+            <ul class="producto-desc">
+              <li>6 tonos disponibles</li>
+            </ul>
+            <p class="precio">$2.200</p>
+            <a class="btn-comprar" href="#contacto">Comprar</a>
+          </div>
+        </div>
+
+                <!-- Producto con imágenes (nuevo) -->
+        <div class="producto">
+          <div class="producto-galeria">
+            <img src="glossfrutal.jpg" alt="Producto Labios - Foto 1">
+            <img src="glossfrutal2.jpg"Producto Labios - Foto 2">
+          </div>
+
+          <div class="producto-info">
+            <h4>Gloss Roll frutal de Pink21</h4>
+            <ul class="producto-desc">
+              <li>6 sabores</li>
+              <li>Chicle 1 en stock</li>
+              <li>Frutilla 1 en stock</li>
+              <li>Sandia 2 en stock</li>
+              <li>Cereza 1 en stock</li>
+              <li>Uva 1 en stock</li>
+              <li>Arandanos 2 en stock</li>
+
+            </ul>
+            <p class="precio">$2.200</p>
+            <a class="btn-comprar" href="#contacto">Comprar</a>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div class="producto-galeria">
+            <img src="labialmatte.jpg" alt="Producto Labios - Foto 1">
+          </div>
+
+          <div class="producto-info">
+            <h4>Labial Liquido Matte de Mely</h4>
+            <ul class="producto-desc">
+              <li>6 tonos disponibles</li>
+
+            </ul>
+            <p class="precio">$2.500</p>
+            <a class="btn-comprar" href="#contacto">Comprar</a>
+          </div>
+        </div>
+
+        <!-- Lista de productos que deben estar igual -->
+        <p class="subtitulo">Productos</p>
+        <ul>
+          <li>Labiales</li>
+          <li>Gloss</li>
+          <li>Delineadores</li>
+          <li>Bálsamos</li>
+        </ul>
+      </div>
+
+      <!-- ===== OJOS ===== -->
+      <div class="categoria">
+        <h3>Ojos</h3>
+        <ul>
+          <li>Rímel</li>
+          <li>Delineador</li>
+          <li>Sombras</li>
+          <li>Arqueador</li>
+          <li>Pestañas</li>
+        </ul>
+      </div>
+
+      <!-- ===== PIEL ===== -->
+      <div class="categoria">
+        <h3>Piel</h3>
+
+        <!-- Producto con imágenes (Corrector original) -->
+        <div class="producto">
+          <div class="producto-galeria">
+            <img src="corrector1.jpg" alt="Corrector - Foto 1">
+            <img src="corrector2.jpg" alt="Corrector - Foto 2">
+            <img src="corrector3.jpg" alt="Corrector - Foto 3">
+            <img src="corrector4.jpg" alt="Corrector - Foto 4">
+          </div>
+
+          <div class="producto-info">
+            <h4>Corrector</h4>
+            <ul class="producto-desc">
+              <li>Cobertura media</li>
+              <li>Ligera</li>
+              <li>Único tono</li>
+            </ul>
+            <p class="precio">$2.000</p>
+            <a class="btn-comprar" href="#contacto">Comprar</a>
+          </div>
+        </div>
+
+        <!-- Lista de productos que deben estar igual -->
+        <p class="subtitulo">Productos</p>
+        <ul>
+          <li>Corrector</li>
+          <li>Base</li>
+          <li>Primer</li>
+        </ul>
+      </div>
+
+      <!-- ===== EXTRAS ===== -->
+      <div class="categoria">
+        <h3>Extras</h3>
+        <ul>
+          <li>Esponjita</li>
+          <li>Vinchas</li>
+          <li>Borlas</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== COMO COMPRAR ===== -->
+  <section id="comprar" class="container">
+    <h2>¿Cómo comprar?</h2>
+    <ol>
+      <li>Elegí tus productos favoritos.</li>
+      <li>Contactanos por WhatsApp o Instagram.</li>
+      <li>Coordinamos pago y envío.</li>
+    </ol>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="container">
+    <h2>Contacto</h2>
+    <p>📧 contacto@kimchicosmetics.com</p>
+    <p>📱 +54 11 0000-0000</p>
+    <p>📷 @kimchicosmetics</p>
+  </section>
+
+  <footer>
+    © 2025 Kimchi Cosmetics
+  </footer>
+
+</body>
+</html>
